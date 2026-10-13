@@ -1,0 +1,1 @@
+"""SportyProject automated checks."""
