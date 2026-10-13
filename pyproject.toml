@@ -1,0 +1,23 @@
+[project]
+name = "sportyproject"
+version = "0.1.0"
+description = "Focused QA automation for the Single Bet Placement exercise"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest==8.3.5",
+    "requests==2.32.3",
+    "selenium==4.29.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra --clean-alluredir --alluredir=allure-results"
+markers = [
+    "api: direct API contract checks",
+    "ui: browser-based end-to-end checks",
+]
+
+[dependency-groups]
+dev = [
+    "allure-pytest==2.16.2",
+]
